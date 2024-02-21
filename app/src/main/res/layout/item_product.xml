@@ -19,7 +19,7 @@
             android:id="@+id/productImageView"
             android:layout_width="match_parent"
             android:layout_height="75dp"
-            android:src="@drawable/ic_launcher_background">
+             >
 
         </ImageView>
 

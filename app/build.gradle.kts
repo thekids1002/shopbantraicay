@@ -32,7 +32,7 @@ android {
 }
 
 dependencies {
-    implementation ("com.squareup.picasso:picasso:2.8")
+    implementation ("com.squareup.picasso:picasso:2.71828")
     implementation ("com.github.castorflex.smoothprogressbar:library:1.1.0")
     implementation("androidx.appcompat:appcompat:1.6.1")
     implementation("com.google.android.material:material:1.9.0")

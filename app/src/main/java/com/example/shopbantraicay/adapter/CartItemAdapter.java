@@ -1,4 +1,4 @@
-package com.example.shopbantraicay;
+package com.example.shopbantraicay.adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,6 +10,10 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.shopbantraicay.models.Product;
+import com.example.shopbantraicay.R;
+import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -62,7 +66,7 @@ public class CartItemAdapter extends RecyclerView.Adapter<CartItemAdapter.ViewHo
         }
 
         public void bind(Product cartItem) {
-
+            Picasso.get().load(cartItem.getImage()).fit().into(imgCart) ;
             txtTitleCart.setText(cartItem.getName());
             txtGiaCart.setText("đ " + cartItem.getPrice());
            // txtSlCart.setText(String.valueOf(cartItem.getQuanity()));//

@@ -1,4 +1,4 @@
-package com.example.shopbantraicay;
+package com.example.shopbantraicay.adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,6 +11,8 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.shopbantraicay.models.Product;
+import com.example.shopbantraicay.R;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
@@ -76,14 +78,13 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
             productNameTextView = itemView.findViewById(R.id.productNameTextView);
             productPriceTextView = itemView.findViewById(R.id.productPriceTextView);
             btnAddCart = itemView.findViewById(R.id.addProductToCard);
+
             btnAddCart.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    // Gọi sự kiện click từ interface hoặc xử lý ngay tại đây
-                    Toast.makeText(v.getContext(), "Đã thêm thành công vào giỏ hàng", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(btnAddCart.getContext(), "Thêm thành công vào giỏ hàng", Toast.LENGTH_SHORT).show();
                 }
             });
-
         }
 
         public void bind(Product product) {

@@ -3,11 +3,12 @@ package com.example.shopbantraicay;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.widget.Toast;
 
+import com.example.shopbantraicay.fragment.CartFragment;
+import com.example.shopbantraicay.fragment.HomeFragment;
+import com.example.shopbantraicay.fragment.PersonalFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity  {
@@ -35,7 +36,7 @@ public class MainActivity extends AppCompatActivity  {
             replaceFragment(new CartFragment());
             return true;
         } else if (itemId == R.id.action_personal) {
-            replaceFragment(new HomeFragment());
+            replaceFragment(new PersonalFragment());
             return true;
         }
         return false;
